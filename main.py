@@ -52,7 +52,6 @@ for cameras in get_cameras_and_timelapse_folders(input_dir):
     directories = glob.glob(cameras["folder"] + "*")
     for dir in directories:
         if is_today(dir.replace(cameras["folder"], "")):
-            # print(f"Ignoring Images for folder {file_name} as its Today")
             continue
         else:
             file_name = dir.replace(cameras["folder"], "")
